@@ -36,7 +36,16 @@ public class DBController {
         Cursor cursor;
         String[] campos =  {dbCore.ID,dbCore.NAME,dbCore.PIX};
         db = dbCore.getReadableDatabase();
-        cursor = db.query(dbCore.TABLE_NAME, campos, null, null, null, null, null, null);
+        cursor = db.query(
+                dbCore.TABLE_NAME,
+                campos,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+        );
 
         if(cursor!=null){
             cursor.moveToFirst();
@@ -50,7 +59,16 @@ public class DBController {
         String[] campos =  {dbCore.ID,dbCore.NAME,dbCore.PIX};
         String where = DBCore.ID + "=" + id;
         db = dbCore.getReadableDatabase();
-        cursor = db.query(DBCore.TABLE_NAME,campos,where, null, null, null, null, null);
+        cursor = db.query(
+                DBCore.TABLE_NAME,
+                campos,
+                where,
+                null,
+                null,
+                null,
+                null,
+                null
+        );
 
         if(cursor!=null){
             cursor.moveToFirst();
